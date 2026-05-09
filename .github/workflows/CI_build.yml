@@ -1,6 +1,8 @@
 name: CI_build
 
 on: [push, pull_request]
+  push:
+  workflow_dispatch:
 env:
   PYTHON_ALLOW_CACHE: true
   PYTHON_DIR_CACHE: D:\.cache\python
