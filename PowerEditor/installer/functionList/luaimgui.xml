@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NotepadPlus>
-	<functionlist>
+	<functionList>
 		<parser
 			id = "LuaImGui"
 			displayName = "LuaImGui"
@@ -121,5 +121,5 @@
 				</className>
 			</function>
 		</parser>
-	</functionlist>
+	</functionList>
 </NotepadPlus>
