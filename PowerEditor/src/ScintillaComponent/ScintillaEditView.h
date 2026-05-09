@@ -41,22 +41,22 @@ class NppParameters;
 typedef sptr_t(*SCINTILLA_FUNC) (void *, unsigned int, uptr_t, sptr_t);
 typedef void * SCINTILLA_PTR;
 
-#define WM_DOCK_USERDEFINE_DLG      (SCINTILLA_USER + 1)
-#define WM_UNDOCK_USERDEFINE_DLG    (SCINTILLA_USER + 2)
-#define WM_CLOSE_USERDEFINE_DLG     (SCINTILLA_USER + 3)
-#define WM_REMOVE_USERLANG          (SCINTILLA_USER + 4)
-#define WM_RENAME_USERLANG          (SCINTILLA_USER + 5)
+#define WM_DOCK_USERDEFINE_DLG	  (SCINTILLA_USER + 1)
+#define WM_UNDOCK_USERDEFINE_DLG	(SCINTILLA_USER + 2)
+#define WM_CLOSE_USERDEFINE_DLG	 (SCINTILLA_USER + 3)
+#define WM_REMOVE_USERLANG		  (SCINTILLA_USER + 4)
+#define WM_RENAME_USERLANG		  (SCINTILLA_USER + 5)
 #define WM_REPLACEALL_INOPENEDDOC   (SCINTILLA_USER + 6)
-#define WM_FINDALL_INOPENEDDOC      (SCINTILLA_USER + 7)
-#define WM_DOOPEN                   (SCINTILLA_USER + 8)
-#define WM_FINDINFILES              (SCINTILLA_USER + 9)
-#define WM_REPLACEINFILES           (SCINTILLA_USER + 10)
-#define WM_FINDALL_INCURRENTDOC     (SCINTILLA_USER + 11)
-#define WM_FRSAVE_INT               (SCINTILLA_USER + 12)
-#define WM_FRSAVE_STR               (SCINTILLA_USER + 13)
+#define WM_FINDALL_INOPENEDDOC	  (SCINTILLA_USER + 7)
+#define WM_DOOPEN				   (SCINTILLA_USER + 8)
+#define WM_FINDINFILES			  (SCINTILLA_USER + 9)
+#define WM_REPLACEINFILES		   (SCINTILLA_USER + 10)
+#define WM_FINDALL_INCURRENTDOC	 (SCINTILLA_USER + 11)
+#define WM_FRSAVE_INT			   (SCINTILLA_USER + 12)
+#define WM_FRSAVE_STR			   (SCINTILLA_USER + 13)
 #define WM_FINDALL_INCURRENTFINDER  (SCINTILLA_USER + 14)
-#define WM_FINDINPROJECTS           (SCINTILLA_USER + 15)
-#define WM_REPLACEINPROJECTS        (SCINTILLA_USER + 16)
+#define WM_FINDINPROJECTS		   (SCINTILLA_USER + 15)
+#define WM_REPLACEINPROJECTS		(SCINTILLA_USER + 16)
 
 // Codepage
 inline constexpr int CP_CHINESE_TRADITIONAL = 950;
@@ -299,10 +299,10 @@ public:
 	}
 
 	void getVisibleStartAndEndPosition(intptr_t* startPos, intptr_t* endPos);
-    char * getWordFromRange(char * txt, size_t size, size_t pos1, size_t pos2);
+	char * getWordFromRange(char * txt, size_t size, size_t pos1, size_t pos2);
 	char * getSelectedTextToMultiChar(char * txt, size_t size, bool expand = true);
 	std::wstring getSelectedTextToWChar(bool expand = true, Sci_Position* selCharNumber = nullptr);
-    char * getWordOnCaretPos(char * txt, size_t size);
+	char * getWordOnCaretPos(char * txt, size_t size);
 
 	intptr_t searchInTarget(const std::string_view& text2Find, size_t fromPos, size_t toPos) const;
 	intptr_t searchInTarget(const wchar_t* text2Find, size_t lenOfText2Find, size_t fromPos, size_t toPos) const;
@@ -370,21 +370,21 @@ public:
 		_userDefineDlg.setScintilla(this);
 	}
 
-    //Marge member and method
-    static const int _SC_MARGE_LINENUMBER;
-    static const int _SC_MARGE_SYMBOL;
-    static const int _SC_MARGE_FOLDER;
-    static const int _SC_MARGE_CHANGEHISTORY;
+	//Marge member and method
+	static const int _SC_MARGE_LINENUMBER;
+	static const int _SC_MARGE_SYMBOL;
+	static const int _SC_MARGE_FOLDER;
+	static const int _SC_MARGE_CHANGEHISTORY;
 
-    void showMargin(int whichMarge, bool willBeShown = true);
-    void showChangeHistoryMargin(bool willBeShown = true);
+	void showMargin(int whichMarge, bool willBeShown = true);
+	void showChangeHistoryMargin(bool willBeShown = true);
 
 	bool hasMarginShown(int witchMarge) {
 		return (execute(SCI_GETMARGINWIDTHN, witchMarge, 0) != 0);
 	}
 
-    void updateBeginEndSelectPosition(bool is_insert, size_t position, size_t length);
-    void marginClick(Sci_Position position, int modifiers);
+	void updateBeginEndSelectPosition(bool is_insert, size_t position, size_t length);
+	void marginClick(Sci_Position position, int modifiers);
 
 	void setMakerStyle(folderStyle style) {
 		bool display;
@@ -576,8 +576,8 @@ public:
 	void performGlobalStyles();
 
 	std::pair<size_t, size_t> getSelectionLinesRange(intptr_t selectionNumber = -1) const;
-    void currentLinesUp() const;
-    void currentLinesDown() const;
+	void currentLinesUp() const;
+	void currentLinesDown() const;
 
 	intptr_t caseConvertRange(intptr_t start, intptr_t end, TextCase caseToConvert);
 	static void changeCase(__inout wchar_t* const strWToConvert, const int& nbChars, const TextCase& caseToConvert);
@@ -696,9 +696,9 @@ protected:
 
 	static int _refCount;
 
-    static UserDefineDialog _userDefineDlg;
+	static UserDefineDialog _userDefineDlg;
 
-    static const int _markersArray[][NB_FOLDER_STATE];
+	static const int _markersArray[][NB_FOLDER_STATE];
 
 	static LRESULT CALLBACK ScintillaProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam, UINT_PTR uIdSubclass, DWORD_PTR dwRefData);
 
@@ -757,10 +757,6 @@ protected:
 
 	void setLuaLexer() {
 		setLexer(L_LUA, LIST_0 | LIST_1 | LIST_2 | LIST_3 | LIST_4 | LIST_5 | LIST_6 | LIST_7, SCE_LUA_IDENTIFIER, 4);
-	}
-
-	void setLuaImGuiLexer() {
-		setLexer(L_LUAIMGUI, LIST_0 | LIST_1 | LIST_2 | LIST_3 | LIST_4 | LIST_5 | LIST_6 | LIST_7, SCE_LUAIMGUI_IDENTIFIER, 4);
 	}
 
 	void setMakefileLexer() {
