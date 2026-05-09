@@ -759,6 +759,10 @@ protected:
 		setLexer(L_LUA, LIST_0 | LIST_1 | LIST_2 | LIST_3 | LIST_4 | LIST_5 | LIST_6 | LIST_7, SCE_LUA_IDENTIFIER, 4);
 	}
 
+	void setLuaImGuiLexer() {
+		setLexer(L_LUAIMGUI, LIST_0 | LIST_1 | LIST_2 | LIST_3 | LIST_4 | LIST_5 | LIST_6 | LIST_7, SCE_LUAIMGUI_IDENTIFIER, 4);
+	}
+
 	void setMakefileLexer() {
 		setLexer(L_MAKEFILE, LIST_NONE);
 	}
