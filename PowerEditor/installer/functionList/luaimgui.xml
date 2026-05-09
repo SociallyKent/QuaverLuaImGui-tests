@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NotepadPlus>
+	<functionlist>
+		<parser
+			id = "LuaImGui"
+			displayName = "LuaImGui"
+			commentExpr= 
+				"
+				(?x)
+				(?s:
+					(?&lt;!-)
+					-{2}\x5B(?'MLCLvl'=*)\x5B.*?\x5D\k'MLCLvl'\x5D
+				)
+			|	(?m-s:-{2}(?!\x5B=*\x5B).*$)
+			|	(?s:\x22(?:[^\x22\x5C]|\x5C.)*\x22)
+			|	(?s:
+					(?&lt;!-{2})
+					\x5B(?'SLMLLvl'=*)\x5B(?:[^\x5C\x5D]|\x5C.)*\x5D\k'SLMLLvl'\x5D
+				)
+			|	(?s:\x27(?:[^\x27\x5C]|\x5C.)*\x27)
+				"
+			>
+			<classRange
+				mainExpr =
+					"
+					(?x)
+					[.\w]+
+					\s*=
+					\s*\{
+					"
+				openSymbole =
+					"\{"
+				closeSymbole =
+					"\}"
+				>
+				<className>
+					<nameExpr
+						expr = "[.\w]+" />
+				</className>
+				<function
+					mainExpr = 
+						"
+						(?x)
+						[.\w]+
+						\s*=
+						\s*(?'QT'[\x22\x27]?)\w+\k'QT'
+						"
+					>
+					<functionName>
+						<funcNameExpr
+							expr = ".*" />
+					</functionName>
+				</function>
+			</classRange>
+			<function
+				mainExpr=
+					"
+					(?x)
+					(?m-i)
+					(?(DEFINE)
+						(?'VALID_ID'
+							\b(?!(?-i:
+									and
+								|	break
+								|	do
+								|	e(?:lse(?:if)?|nd)
+								|	f(?:alse|or|unction)
+								|	goto
+								|	i[fn]
+								|	local
+								|	n(?:il|ot)
+								|	or
+								|	re(?:peat|turn)
+								|	t(?:hen|rue)
+								|	until
+								|	while
+								)\b)
+								[A-Za-z_\x7F-\xFF][\w\x7F-\xFF]*
+							)
+						)
+					(?m)
+					(?:
+						^\h*
+						(?:local\s+)?
+						function\s+
+						\K
+						(?&amp;VALID_ID)
+						(?:\s*\.\s*(?&amp;VALID_ID))*
+						(?:\s*:\s*(?&amp;VALID_ID))?
+					|
+						(?&amp;VALID_ID)
+						(?:\s*\.\s*(?&amp;VALID_ID))*
+						\s*=
+						\s*function
+						)
+					\s*\(
+						[^)]*
+						\)
+					"
+					>
+				<functionName>
+					<nameExpr
+						expr =
+							"
+							[A-Za-z_\x7F-\xFF]
+							[\w\x7F-\xFF]*
+							(?=\s*[(=])
+							"
+						/>
+				</functionName>
+				<className>
+					<nameExpr
+						expr =
+							"
+							[A-Za-z_\x7F-\xFF]
+							[\w\x7F-\xFF]*
+							(?:\s*\.\s*[A-Za-z_\x7F-\xFF][\w\x7F-\xFF]*)*
+							(?=\s*[.:])
+							"
+						/>
+				</className>
+			</function>
+		</parser>
+	</functionlist>
+</NotepadPlus>
