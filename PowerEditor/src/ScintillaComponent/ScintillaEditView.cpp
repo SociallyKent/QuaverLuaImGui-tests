@@ -1869,7 +1869,8 @@ void ScintillaEditView::defineDocType(LangType typeDoc)
 
 		case L_LUA :
 			setLuaLexer(); break;
-
+		case L_LUAIMGUI:
+			setLuaLexer(); break;
 		case L_MAKEFILE :
 			setMakefileLexer(); break;
 
