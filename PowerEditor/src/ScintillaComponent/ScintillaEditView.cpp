@@ -127,6 +127,7 @@ LanguageNameInfo ScintillaEditView::_langNameInfoArray[L_EXTERNAL + 1] = {
 	{L"perl",             L"Perl",                   L"Perl source file",                                  L_PERL,            "perl"},
 	{L"python",           L"Python",                 L"Python file",                                       L_PYTHON,          "python"},
 	{L"lua",              L"Lua",                    L"Lua source File",                                   L_LUA,             "lua"},
+	{L"luaimgui", 		  L"LuaImGui",				 L"LuaImGui source File",							   L_LUAIMGUI, 		  "lua"},
 	{L"tex",              L"TeX",                    L"TeX file",                                          L_TEX,             "tex"},
 	{L"fortran",          L"Fortran free form",      L"Fortran free form source file",                     L_FORTRAN,         "fortran"},
 	{L"bash",             L"Shell",                  L"Unix script file",                                  L_BASH,            "bash"},
