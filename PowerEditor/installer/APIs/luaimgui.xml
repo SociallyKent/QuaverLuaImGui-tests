@@ -1,0 +1,139 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<NotepadPlus>
+	<AutoComplete language = "LuaImgui" >
+		<Environment
+			ignoreCase = "no"
+			startFunc = "("
+			stopFunc = ")"
+			paramSeparator = ","
+			terminal = ";"
+			additionalWordChar = ".:"
+			 />
+		<!-- Lua syntax-->
+		<KeyWord name = "and" func = "no" />
+		<KeyWord name = "break" func = "no" />
+		<KeyWord name = "do" func = "no" />
+		<KeyWord name = "else" func = "no" />
+		<KeyWord name = "elseif" func = "no" />
+		<KeyWord name = "end" func = "no" />
+		<KeyWord name = "false" func = "no" />
+		<KeyWord name = "for" func = "no" />
+		<KeyWord name = "function" func = "no" />
+		<KeyWord name = "if" func = "no" />
+		<KeyWord name = "in" func = "no" />
+		<KeyWord name = "local" func = "no" />
+		<KeyWord name = "nil" func = "no" />
+		<KeyWord name = "not" func = "no" />
+		<KeyWord name = "or" func = "no" />
+		<KeyWord name = "repeat" func = "no" />
+		<KeyWord name = "return" func = "no" />
+		<KeyWord name = "then" func = "no" />
+		<KeyWord name = "true" func = "no" />
+		<KeyWord name = "until" func = "no" />
+		<KeyWord name = "while" func = "no" />
+		<KeyWord name = "goto" func = "no" />
+
+		<!-- Odd ones out-->
+		<KeyWord name = "_G" func = "no" />
+		<KeyWord name = "_MOONSHARP" func = "no" />
+		<KeyWord name = "_ENV" func = "no" />
+		<KeyWord name = "_VERSION" func = "no" />
+		
+		<KeyWord name = "package.loaded" func = "no" />
+		<KeyWord name = "tonumber" func = "yes" />
+		<KeyWord name = "tostring" func = "yes" />
+		 <!-- collectgarbage -->
+		<KeyWord name = "collectgarbage" func = "yes" />
+		<KeyWord name = "coroutine.create" func = "yes" />
+		<KeyWord name = "coroutine.resume" func = "yes" />
+		<KeyWord name = "coroutine.running" func = "yes" />
+		<KeyWord name = "coroutine.status" func = "yes" />
+		<KeyWord name = "coroutine.wrap" func = "yes" />
+		<KeyWord name = "coroutine.yield" func = "yes" />
+		<KeyWord name = "next" func = "yes" />
+		<KeyWord name = "pairs" func = "yes" />
+		<KeyWord name = "error" func = "yes" />
+		<KeyWord name = "ipairs" func = "yes" />
+		<KeyWord name = "pcall" func = "yes" />
+		<KeyWord name = "print" func = "yes" />
+		<KeyWord name = "read" func = "yes" />
+		<KeyWord name = "write" func = "yes" />
+		<KeyWord name = "select" func = "yes" />
+		<KeyWord name = "type" func = "yes" />
+		<KeyWord name = "xpcall" func = "yes" />
+		<!-- math -->
+		<KeyWord name = "math.abs" func = "yes" />
+		<KeyWord name = "math.acos" func = "yes" />
+		<KeyWord name = "math.asin" func = "yes" />
+		<KeyWord name = "math.atan" func = "yes" />
+		<KeyWord name = "math.atan2" func = "yes" />
+		<KeyWord name = "math.ceil" func = "yes" />
+		<KeyWord name = "math.cos" func = "yes" />
+		<KeyWord name = "math.cosh" func = "yes" />
+		<KeyWord name = "math.deg" func = "yes" />
+		<KeyWord name = "math.exp" func = "yes" />
+		<KeyWord name = "math.floor" func = "yes" />
+		<KeyWord name = "math.fmod" func = "yes" />
+		<KeyWord name = "math.frexp" func = "yes" />
+		<KeyWord name = "math.huge" func = "no" />
+		<KeyWord name = "math.ldexp" func = "yes" />
+		<KeyWord name = "math.log" func = "yes" />
+		<KeyWord name = "math.log10" func = "yes" />
+		<KeyWord name = "math.max" func = "yes" />
+		<KeyWord name = "math.min" func = "yes" />
+		<KeyWord name = "math.modf" func = "yes" />
+		<KeyWord name = "math.pi" func = "no" />
+		<KeyWord name = "math.pow" func = "yes" />
+		<KeyWord name = "math.rad" func = "yes" />
+		<KeyWord name = "math.random" func = "yes" />
+		<KeyWord name = "math.randomseed" func = "yes" />
+		<KeyWord name = "math.sinh" func = "yes" />
+		<KeyWord name = "math.tan" func = "yes" />
+		<!-- os -->
+		<KeyWord name = "os.clock" func = "yes" />
+		<KeyWord name = "os.date" func = "yes" />
+		<KeyWord name = "os.difftime" func = "yes" />
+		<KeyWord name = "os.time" func = "yes" />
+		<!-- string -->
+		<KeyWord name = "string.byte" func = "yes" />
+		<KeyWord name = "string.char" func = "yes" />
+		<KeyWord name = "string.dump" func = "yes" />
+		<KeyWord name = "string.find" func = "yes" />
+		<KeyWord name = "string.format" func = "yes" />
+		<KeyWord name = "string.gmatch" func = "yes" />
+		<KeyWord name = "string.gsub" func = "yes" />
+		<KeyWord name = "string.len" func = "yes" />
+		<KeyWord name = "string.match" func = "yes" />
+		<KeyWord name = "string.reverse" func = "yes" />
+		<KeyWord name = "string.upper" func = "yes" />
+		<!-- table -->
+		<KeyWord name = "table.concat" func = "yes" />
+		<KeyWord name = "table.insert" func = "yes" />
+		<KeyWord name = "table.pack" func = "yes" />
+		<KeyWord name = "table.remove" func = "yes" />
+		<KeyWord name = "table.sort" func = "yes" />
+		<KeyWord name = "table.unpack" func = "yes" />
+			<!-- compatibility -->
+			<KeyWord name = "unpack" func = "yes" />
+		<!-- metatable -->
+		<KeyWord name = "getmetatable" func = "yes" />
+		<KeyWord name = "setmetatable" func = "yes" />
+		<KeyWord name = "rawequal" func = "yes" />
+		<KeyWord name = "rawget" func = "yes" />
+		<KeyWord name = "rawlen" func = "yes" />
+		<KeyWord name = "rawset" func = "yes" />
+		<!-- bit32 -->
+		<KeyWord name = "bit32.arshift" func = "yes" />
+		<KeyWord name = "bit32.band" func = "yes" />
+		<KeyWord name = "bit32.bnot" func = "yes" />
+		<KeyWord name = "bit32.bor" func = "yes" />
+		<KeyWord name = "bit32.btest" func = "yes" />
+		<KeyWord name = "bit32.bxor" func = "yes" />
+		<KeyWord name = "bit32.extract" func = "yes" />
+		<KeyWord name = "bit32.replace" func = "yes" />
+		<KeyWord name = "bit32.lrotate" func = "yes" />
+		<KeyWord name = "bit32.lshift" func = "yes" />
+		<KeyWord name = "bit32.rrotate" func = "yes" />
+		<KeyWord name = "bit32.rshift" func = "yes" />
+	</AutoComplete>
+</NotepadPlus>
