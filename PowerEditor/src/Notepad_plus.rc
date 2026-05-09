@@ -1179,6 +1179,7 @@ BEGIN
         MENUITEM "LaTeX",                 IDM_LANG_LATEX
         MENUITEM "LISP",                  IDM_LANG_LISP
         MENUITEM "Lua",                   IDM_LANG_LUA
+		MENUITEM "LuaImGui",              IDM_LANG_LUAIMGUI
     END
      POPUP "M"
     BEGIN
