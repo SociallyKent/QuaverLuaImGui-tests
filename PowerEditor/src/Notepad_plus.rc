@@ -1044,6 +1044,7 @@ BEGIN
         MENUITEM "LISP",                    IDM_LANG_LISP
         MENUITEM "LaTeX",                   IDM_LANG_LATEX
         MENUITEM "Lua",                     IDM_LANG_LUA
+		MENUITEM "LuaImGui",                IDM_LANG_LUAIMGUI
         MENUITEM "Makefile",                IDM_LANG_MAKEFILE
         MENUITEM "Matlab",                  IDM_LANG_MATLAB
         MENUITEM "Microsoft Transact-SQL",  IDM_LANG_MSSQL
