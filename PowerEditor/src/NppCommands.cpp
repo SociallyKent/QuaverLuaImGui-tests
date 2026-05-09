@@ -3848,6 +3848,7 @@ void Notepad_plus::command(int id)
         case IDM_LANG_ASP :
         case IDM_LANG_CSS :
         case IDM_LANG_LUA :
+		case IDM_LANG_LUAIMGUI :
         case IDM_LANG_PERL :
         case IDM_LANG_PYTHON :
         case IDM_LANG_PASCAL :
